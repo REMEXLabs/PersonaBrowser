@@ -1,0 +1,526 @@
+#content{
+  margin: 50px auto 20px;
+  max-width: @contentWidth;
+  
+  @media only screen and (max-width: @breakMiddle){
+	padding: 0 5px;
+  }
+
+  & #main{
+    background-color: @contentColor;
+    float: right;
+    width: 78%;
+
+    & h1,h2,h3{
+	  color: #FFFFFF;
+      padding: 0px 20px;
+	  text-decoration: none;
+    }
+
+    &.wide{
+      width: 100%;
+
+      /* Richtlinien */
+      & .disable-filter{
+          display: block;
+          padding: 20px;
+
+        & .icons > a{
+          background-color: red;
+          display: block;
+          float: left;
+          height: 179px;
+          margin-right: 2%;
+          margin-bottom: 20px;
+          position: relative;
+          text-indent: -9999px;
+          width: 17.6%;
+		  
+		  &:first-child{
+			margin-left: 2%;
+		  }
+
+          &.blind{
+
+            &:after{
+              content: "";
+              background-position: -5px -161px;
+              display: block;
+              left: 50%;
+              height: 57px;
+              margin-left: -53px;
+              margin-top: -28.5px;
+              position: absolute;
+              top: 50%;
+              width: 106px;
+            }
+          }
+          &.brain{
+            &:after{
+              content: "";
+              background-position: -1px -231px;
+              display: block;
+              left: 50%;
+              height: 90px;
+              margin-left: -45px;
+              margin-top: -45px;
+              position: absolute;
+              top: 50%;
+              width: 90px;
+            }
+
+            &:hover:after{
+              background-position: -101px -233px;
+            }
+          }
+          &:hover{
+            background-color: blue;
+          }
+        }
+
+
+        /* Filters */
+        & .filters{
+			border-bottom: 1px solid #FFFFFF;
+			font-size: 1.2em;
+			padding-bottom: 20px;
+		
+          & > div{
+            float: left;
+			width: 30%;
+
+            & label{
+              cursor: pointer;
+              margin-right: 7px;
+            }
+             & select{
+              color: #444444;
+            }
+          }
+		  & > input{
+			width: 10%;
+		  }
+
+        }
+      }
+
+      & .rules{
+        padding: 20px 40px;
+
+        & > li{
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: @breakMiddle){
+      float: none;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    & .paragraph{
+      border-bottom: 2px solid #FFFFFF;
+      margin: 20px 25px;
+	  
+	  & a{
+		text-decoration: none;
+	  }
+	  & h3{
+		color: #FFFFFF;
+		padding: 0;
+		text-decoration: none;
+	  }
+	  
+	  & p{
+		color: #FFFFFF;
+		text-decoration: none;
+	  }
+    }
+  }
+  & #aside{
+    background-color: @contentColor;
+    float: left;
+    margin-right: 2%;
+    width: 20%;
+
+    @media only screen and (max-width: @breakMiddle){
+      float: none;
+      width: 100%;
+    }
+
+    & #nav{
+      padding: 20px 25px;
+
+      & .headline{
+        font-size: 1.5em;
+        margin:0 0 20px;
+      }
+
+      & ul{
+        margin: 0 0 20px;
+
+        & li{
+          & a{
+            color: @fontColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* Home Teaser */
+
+  & .teaser-box{
+
+    float: left;
+    margin: 20px 0;
+    width: 48%;
+
+    &:nth-child(odd){
+      margin-right: 4%;
+    }
+
+    @media only screen and (max-width: @breakMiddle){
+      float: none;
+      width: 100%;
+    }
+
+    & h2{
+      background-color: @highlightContentColor;
+      color: @fontColor;
+      text-align: center;
+      padding: 1%;
+      position: relative;
+      margin: 3% 0 0 0;
+
+      @media only screen and (max-width: @breakMiddle){
+        background-color: transparent;
+      }
+    }
+
+    & .teaser-persona{
+      background-color: @contentColor;
+      border-bottom: 2.5px solid @detailColor;
+      width: 100%;
+
+		  &:last-child{
+			border-bottom: none;
+		  }
+		&:hover{
+			background-color: @highlightContentColor;
+		}
+		
+        & img{
+          border: 5px solid @highlightContentColor;
+          float: left;
+          height: 20%;
+          margin: 1%;
+          margin-right: 3%;
+          overflow: hidden;
+          width: 20%;
+        }
+
+        & .persona-content{
+		  float: left;
+          padding: 1%;
+          overflow: hidden;
+		  width: 70%;
+
+          & ul{
+            list-style: none;
+            margin: 10px 0;
+            padding: 0;
+            width: 100%;
+
+            & li{
+              color: @detailColor;
+              float: left;
+
+                &:after{
+                  content: "|";
+                  padding: 0 5px;
+                }
+                &:last-child:after{
+                  content: "";
+                }
+            }
+          }
+
+          & p{
+            color: @fontColor;
+            width: 100%;
+          }
+        }
+    }
+  }
+  & .teaser-see{
+    background-color: @teasercolorSee;
+  }
+  & .teaser-hear{
+    background-color: @teasercolorHear;
+  }
+  & .teaser-know{
+    background-color: @teasercolorKnow;
+  }
+  & .teaser-do{
+    background-color: @teasercolorDo;
+  }
+
+  & .persona-list{
+    width: 100%;
+    padding: 0% 5% 0% 5%;
+
+    & .persona-short{
+      width: 25%;
+      margin: 0% 2.5%;
+      float: left;
+
+      & .persona-block{
+        width: 100%;
+
+        & .persona-alpha{
+          border: 12px solid @highlightContentColor;
+          float: left;
+
+          & img{
+            width: 100%;
+            max-height: 270px;
+            min-height: 270px;
+            max-width: 270px;
+            min-width: 270px;
+          }
+        }
+
+        & .persona-beta{
+          border: 12px solid @highlightContentColor;
+
+
+
+          & img{
+            width: 22%;
+            }
+
+
+          & .borderright{
+            border-right: 5px solid @highlightContentColor;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+
+  & .persona{
+    width: 100%;
+    background-color: @contentColor;
+	
+	&.see{
+	   border-top: 20px #11a8ab solid;
+	}
+	&.hear{
+	   border-top: 20px #e74766 solid;
+	}
+	&.mental{
+	   border-top: 20px #fbb059 solid;
+	}
+	&.motor{
+	   border-top: 20px #52c5f4 solid;
+	}
+	
+    & .searchResult{
+
+      & img{
+        width: 20%;
+        float: left;
+        margin: 2%;
+      }
+
+      & div{
+        float: left;
+        width: 70%;
+        margin: 2%;
+
+        & h3{
+
+        }
+
+        & p{
+
+           & a:link{
+             color: @fontColor;
+             text-decoration: underline;
+           }
+
+            a:visited {
+              color: @detailColor;
+            }
+        }
+      }
+    }
+
+    & .persona-head{
+        margin: 2%;
+
+      & .rule_bez{
+        color: @fontColor;
+        width: 80%;
+        float: left;
+      }
+
+      & .rule_A{
+        color: @fontColor;
+        width: 20%;
+        float: right;
+      }
+
+      & .persona-symbol{
+        width: 75%;
+
+        & li{
+          float: left;
+          list-style: none;
+          width: 15%;
+        }
+
+        & img{
+          width: 50%;
+        }
+      }
+
+      & ul{
+
+        & li{
+          color: @detailColor;
+          list-style: none;
+        }
+      }
+	  
+	  & span{
+		display: block;
+		float: right;
+		height: 80px;
+		text-indent: -9999px;
+		width: 80px;
+		
+		&.see{
+		 background: url(../../img/eye.png);
+		  background-size: 100%;
+		}
+		&.hear{
+		 background: url(../../img/ear.png);
+		  background-size: 100%;
+		}
+		&.motor{
+		 background: url(../../img/arm.png);
+		  background-size: 100%;
+		}
+		&.mental{
+		  background: url(../../img/brain.png);
+		  background-size: 100%;
+		}
+		
+	  }
+
+      }
+
+    & .persona-meta{
+      height: 125px;
+      margin: 0% 10% 5% 10%;
+    }
+
+    & .persona-content{
+      margin: 3% 2% 3% 2%;
+
+      & img{
+        border: 12px solid @highlightContentColor;
+        float: left;
+        height: 25%;
+        margin: 0 3% 3% 0;
+        overflow: hidden;
+        width: 25%;
+      }
+
+      & .persona-info {
+        width: 65%;
+        height: 100%;
+        float: left;
+        position: relative;
+
+        & ul {
+          width: 25%;
+          float: left;
+
+          & .active-description{
+            color: @fontColor;
+			cursor: pointer;
+            list-style: none;
+            margin-bottom: 15%;
+			
+			& > span{
+				font-size: 1.4em;
+			}
+			
+			&.active{
+				color: @highlightFontColor;
+				
+              & .persona-infobox {
+                background-color: @highlightContentColor;
+                float: left;
+                display: block;
+                top: 0;
+                left: 24%;
+                position: absolute;
+                width: 60%;
+
+                & p{
+                  color: @fontColor;
+                  margin: 3%;
+                }
+              }
+            }
+			
+			&:hover{
+				color: @highlightFontColor;
+			}
+
+            & .persona-infobox {
+              background-color: @highlightContentColor;
+              width: 70%;
+              float: left;
+              display: none;
+            }
+          }
+
+        }
+
+       }
+      }
+
+    & .example{
+      margin: 3% 2% 3% 2%;
+
+      & xmp{
+        background-color: #999999;
+        border-width:5px;
+        border-style:inset;
+        border-color: #222222;
+      }
+
+    }
+
+    & .persona-footer{
+	  margin-left: 1%;
+      width: 100%;
+
+      & a{
+        color: @highlightFontColor;
+        font-size: 20px;
+        margin-left: 2%;
+      }
+    }
+    }
+

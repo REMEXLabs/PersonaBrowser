@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body class="home">
+<div id="header" class="clearfix">
+    <form method="get" id="searchform" action="/wordpress/index.php">
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="search_submit" value="Suchen" />
+    </form>
+    <div id="language-selector">
+        <ul class="clearfix">
+            <li><a href="http://localhost/wordpress/en/">EN</a></li>
+            <li><a href="http://localhost/wordpress/de/">DE</a></li>
+        </ul>
+    </div>
+    <div id="main-nav">
+        <div class="nav-layer">Layer</div>
+        <div class="menu-header-menu-container"><ul id="menu-header-menu" class="menu"><li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="http://localhost/wordpress/">Startseite</a></li>
+            <li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="http://localhost/wordpress/prinzipien/">Prinzipien</a></li>
+            <li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="http://localhost/wordpress/richtlinien/">Richtlinien</a></li>
+        </ul></div>	</div>
+
+</div>
+
+<div id="content">
+    <!-- Hier kommt der Hauptinhalt rein -->
+    <div class="persona clearfix">
+        <div class="persona-head" >
+            <div class="rule_bez">
+                <h2>1.2.1. | Reine Audio- und Videoinhalte (aufgezeichnet)</h2>
+            </div>
+            <div class="rule_A">
+                <h2>Konformität: A</h2>
+            </div>
+        </div>
+        <div class="persona-meta clearfix">
+            <div class="k-icon eye-icon active">
+            </div>
+            <div class="k-icon ear-icon">
+            </div>
+            <div class="k-icon brain-icon">
+            </div>
+            <div class="k-icon muscle-icon">
+            </div>
+        </div>
+        <div class="persona-content clearfix">
+            <br>
+            <p>Alle Nicht-Text-Inhalte, die dem Benutzer präsentiert werden, haben eine Textalternative, die einem äquivalenten Zweck dient, mit Ausnahme der unten aufgelisteten Situationen. </p>
+            <h3>Steuerelemente, Eingabe</h3>
+            <p>Wenn es sich bei dem Nicht-Text-Inhalt um ein Steuerelement handelt oder Eingaben durch den Benutzer akzeptiert, dann hat dieser einen Namen, der seinen Zweck beschreibt. (Beachten Sie Richtlinie 4.1.2 für zusätzliche Anforderungen an Steuerelemente und Inhalte, die Eingaben durch den Benutzer akzeptieren.) </p>
+            <h3>Zeitbasierte Medien </h3>
+            <p>Wenn es sich bei den Nicht-Text-Inhalten um zeitbasierte Medien handelt, dann stellen Textalternativen zumindest eine deskriptive Identifizierung des Nicht-Text-Inhalts bereit. (Beachten Sie Richtlinie 1.2 für zusätzliche Anforderungen an Medien.) </p>
+            <h3>Test</h3>
+            <p>Wenn es sich bei dem Nicht-Text-Inhalt um einen Test oder eine Übung handelt, die nichtig wäre, wenn sie als Text dargestellt würde, dann stellen Textalternativen zumindest eine deskriptive Identifizierung des Nicht-Text-Inhalts bereit</p>
+            <h3>Sensorisch</h3>
+            <p>Wenn Nicht-Text-Inhalt hauptsächlich dafür gedacht ist, eine bestimmte Sinneserfahrung zu schaffen, dann stellen Textalternativen zumindest eine deskriptive Identifizierung des Nicht-Text-Inhalts bereit.</p>
+            <h3>CAPTCHA</h3>
+            <p>Wenn der Zweck des Nicht-Text-Inhalts der ist zu bestätigen, dass eine Person und nicht ein Computer auf den Inhalt zugreift, dann werden Textalternativen bereitgestellt, die den Zweck des Nicht-Text-Inhalts identifizieren. Außerdem werden alternative Formen von CAPTCHAs bereitgestellt, die Ausgabeformen für verschiedene Arten der sensorischen Wahrnehmung nutzen, um verschiedenen Behinderungen Rechnung zu tragen. </p>
+            <h3>Dekoration, Formatierung, unsichtbar</h3>
+            <p>Wenn der Nicht-Text-Inhalt reine Dekoration ist, nur für visuelle Formatierung benutzt wird oder dem Benutzer gar nicht präsentiert wird, dann wird der Inhalt so implementiert, dass er von assistierender Technik ignoriert werden kann. </p>
+        </div>
+        <div class="example">
+            <h3>Beispiele zur Umsetzung der Richtlinien</h3>
+            <div class="">
+                <h4>Beispiel 1</h3>
+                <p>
+                    The icon and text are contained in the same a element. (HTML4 / HTML5)
+                </p>
+                <h4>Code Beispiele</h3>
+                <xmp>
+                    <a href="products.html">
+                        <img src="icon.gif" alt="">
+                        Products page
+                    </a>
+                </xmp>
+            </div>
+            <div class="">
+                <h3>Beispiel 2</h3>
+                <p>
+                    A link contains an icon and text, and the site help refers to the icon. The img has a text alternative which is the name used for the icon in the site help, which describes clicking the home page icon. (HTML4 / HTML5)
+                </p>
+                <h3>Code Beispiele</h3>
+                <xmp>
+                    <a href="home.html">
+                        <img src="house.gif" alt="home page icon">
+                        Go to the home page
+                    </a>
+                </xmp>
+            </div>
+        </div>
+        <div class="persona-footer">
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <!-- Haben wir einen -->
+</div>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

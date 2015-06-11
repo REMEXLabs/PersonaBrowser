@@ -1,0 +1,160 @@
+#header{
+  background-color: @contentColor;
+  margin: 0 auto;
+  max-width: @contentWidth;
+  position: relative;
+  width: 100%;
+
+    & #main-nav{
+      display: block;
+      float: left;
+      height: 100%;
+      position: relative;
+      width: 70%;
+
+      @media only screen and (max-width: @breakMobile){
+        float: none;
+        width: 100%;
+
+        &:before{
+          background-color: #FFFFFF;
+          content: "";
+          display: block;
+          height: 4px;
+          width: 100%;
+        }
+      }
+
+      & .nav-layer{
+        cursor: pointer;
+        display: none;
+        text-indent: -9999px;
+        height: 50px;
+        position: relative;
+        width: 100%;
+
+          &:before{
+             background: url(../img/nav.png) 0 0 no-repeat transparent;
+            content: "";
+            display: block;
+            height: 16px;
+            left: 10px;
+            margin-top: -11px;
+            position: absolute;
+            top: 50%;
+            width: 22px;
+          }
+
+        @media only screen and (max-width: @breakMobile){
+            display: block;
+        }
+      }
+
+      & ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+        & li{
+		  cursor: pointer;
+          float: left;
+          
+          @media only screen and (max-width: @breakMobile){
+            border-bottom: 1px solid #FFFFFF;
+			display: none;
+            float: none;
+          }
+
+            &:hover{
+              background-color: #D9D9D9;
+            }
+
+            & a{
+              color: @fontColor;
+			  display: block;
+              font-size: 2em;
+			  padding: 37px 20px 37px;
+              text-decoration: none;
+			  
+			  @media only screen and (max-width: @breakMobile){
+				padding: 10px;
+			  }
+			  
+				  &:first-child{
+				  padding: 37px 20px 37px 20px;
+				  
+				   @media only screen and (max-width: @breakMobile){
+				   border-top: 1px solid #FFFFFF;
+					padding: 10px;
+				  }
+				} 
+            }
+        }
+    }
+    & #searchform{
+      display: inline-block;
+      float: right;
+      margin-right: 30px;
+      margin-top: 45px;
+      position: relative;
+      width: 20%;
+
+      @media only screen and (max-width: @breakMobile){
+        float: none;
+        margin-bottom: 16px;
+		margin-left: 10px;
+        margin-top: 16px;
+		width: 40%;
+      }
+	  @media only screen and (max-width: @breakMiddle){
+		width: 50%;
+	  }
+
+
+      & input[type='text']{
+          color: #444444;
+          height: 30px;
+          margin-right: 20px;
+          padding: 0;
+          width: 100%;
+        }
+        & #search_submit{
+          background-position: -114px -2px;
+          background-color: transparent;
+          border: none;
+          height: 12px;
+          margin-top: -6px;
+          position: absolute;
+          text-indent: -99999px;
+          top: 50%;
+          right: 5px;
+          width: 10px;
+        }
+
+    }
+    & #language-selector{
+      position: absolute;
+      right: 30px;
+      top: 0px;
+
+
+
+      & ul{
+        list-style: none;
+
+        & li{
+          float: left;
+
+          &:first-child:after{
+            content: "|";
+            padding: 0 5px;
+          }
+          & a{
+            color: @fontColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}
